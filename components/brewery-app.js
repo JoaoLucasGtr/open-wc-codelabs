@@ -62,12 +62,12 @@ export default class BreweryApp extends LitElement {
     return html`
       <h1>Breweries App</h1>
 
-      <h2>Breweries</h2>
+      <h2>Breweries ${this.filter ? ` (filtering: ${this.filter})` : ''}</h2>
       <p>(${totalVisited} visited and ${totalNotVisted} still to go)</p>
 
-      <mwc-button @click=${this._filterNone}>Filter none</mwc-button>
-      <mwc-button @click=${this._filterVisited}>Filter visited</mwc-button>
-      <mwc-button @click=${this._filterNotVisited}>Filter not-visited</mwc-button>
+      <mwc-button outlined @click=${this._filterNone}>Filter none</mwc-button>
+      <mwc-button outlined @click=${this._filterVisited}>Filter visited</mwc-button>
+      <mwc-button outlined @click=${this._filterNotVisited}>Filter not-visited</mwc-button>
 
       <ul>
         ${breweries.map(brewery => html`

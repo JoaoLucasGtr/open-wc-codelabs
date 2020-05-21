@@ -19,7 +19,7 @@ export default class BreweryDetail extends LitElement {
       <h3>${this.name} (${this.visited ? 'visited' : 'not-visited'})</h3>
       <p>brewery type: ${this.type}</p>
       <p>city: ${this.city}</p>
-      <mwc-button @click=${this._toggleVisitedStatus}>
+      <mwc-button outlined @click=${this._toggleVisitedStatus}>
         Mark as ${this.visited ? 'not-visited' : 'visited'}
       </mwc-button>
     `;
